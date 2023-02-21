@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25</title>
+    <link rel='icon' href='assets/25.png' type='image/png'>
+</head>
+<body> 
+    <!-- enter -->
+    <div id="enter" class="">
+        <h2 onclick="enterSite()">enter</h2>
+    </div>
+
+    <!-- buttons -->
+
+    <div id="buttons" class="hide">
+        <img src="assets/25-big.png" alt="25" height="50vh">
+        <h1 onclick="getHelp()">?</h1>
+        <h1 id="time"></h1>
+    </div>
+
+    <!-- help page -->
+
+    <div id="help" class="hide">
+        <h2>The ticking of a clock keeps it working. Without the ticking, the clock is broken. Though we may not hear the sound as much any longer, we still associate this sound with the passing of time. How do you know when a tick is wrong? What would happen if clocks stopped ticking and made different sounds entirely?</h2>
+        <h3>created and designed by themis    ☻</h3>
+        <h1 onclick="leaveHelp()">back</h1>
+        <img src="assets/question.png" alt="question mark">
+    </div>
+
+    <!-- hours -->
+    <div id="hr0" class="hide">
+        <h2 onclick="hr0TimeReveal()">[muffled sounds]</h2>
+        <audio id="audio-0" src="assets/sound/0.silence.wav"></audio>
+        <img id="hr0-img" class="hide" src="assets/images/0.png" alt="">
+    </div>
+
+    <div id="hr1" class="hide">
+        <h2 onclick="hr1TimeReveal()">[distant arguing]</h2>
+        <h2 onclick="hr1Fast()">[scrubbing]</h2>
+        <audio id="audio-1" src="assets/sound/1.argue.wav"></audio>
+        <audio id="audio-1-fast" src="assets/sound/1.argue-fast.wav"></audio>
+        <img id="hr1-img" class="hide" src="assets/images/1.png" alt="">
+        <img id="hr1-img-fast" class="hide" src="assets/images/1-fast.png" alt="">
+    </div>
+
+    <div id="hr2" class="hide">
+        <h2>[bottle cap drops]</h2>
+        <h2>[running water]</h2>
+        <h2>[glasses clink]</h2>
+        <audio id="audio-2" src="assets/sound/2.clink.wav"></audio>
+        <audio id="audio-2-fast" src="assets/sound/2.clink-fast.wav"></audio>
+        <audio id="audio-2-slow" src="assets/sound/2.clink-slow.wav"></audio>
+        <img id="hr2-img" class="hide" src="assets/images/2.png" alt="">
+        <img id="hr2-img-fast" class="hide" src="assets/images/2-fast.png" alt="">
+        <img id="hr2-img-slow" class="hide" src="assets/images/2-slow.png" alt="">
+    </div>
+
+    <div id="hr3" class="hide">
+        <h2>[mice speaking]</h2>
+        <h2>[birds laughing]</h2>
+        <h2>[pterodactyls screeching]</h2>
+        <audio id="audio-3" src="assets/sound/3.birdlaugh.wav"></audio>
+        <audio id="audio-3-fast" src="assets/sound/3.birdlaugh-fast.wav"></audio>
+        <audio id="audio-3-slow" src="assets/sound/3.birdlaugh-slow.wav"></audio>
+        <img id="hr3-img" class="hide" src="assets/images/3.png" alt="">
+        <img id="hr3-img-fast" class="hide" src="assets/images/3-fast.png" alt="">
+        <img id="hr3-img-slow" class="hide" src="assets/images/3-slow.png" alt="">
+    </div>
+
+    <div id="hr4" class="hide">
+        <h2>[swallowing water]</h2>
+        <h2>[lemon squeezing]</h2>
+        <h2>[digestion noises]</h2>
+        <audio id="audio-4" src="assets/sound/4.watertread.wav"></audio>
+        <audio id="audio-4-fast" src="assets/sound/4.watertread-fast.wav"></audio>
+        <audio id="audio-4-slow" src="assets/sound/4.watertread-slow.wav"></audio>
+        <img id="hr4-img" class="hide" src="assets/images/4.png" alt="">
+        <img id="hr4-img-fast" class="hide" src="assets/images/4-fast.png" alt="">
+        <img id="hr4-img-slow" class="hide" src="assets/images/4-slow.png" alt="">
+    </div>
+
+    <div id="hr5" class="hide">
+        <h2>[imitation bird noises]</h2>
+        <h2>[squeak]</h2>
+        <h2>[dj turntable]</h2>
+        <audio id="audio-5" src="assets/sound/5.chirp.wav"></audio>
+        <audio id="audio-5-fast" src="assets/sound/5.chirp-fast.wav"></audio>
+        <audio id="audio-5-slow" src="assets/sound/5.chirp.-slow.wav"></audio>
+        <img id="hr5-img" class="hide" src="assets/images/5.png" alt="">
+        <img id="hr5-img-fast" class="hide" src="assets/images/5-fast.png" alt="">
+        <img id="hr5-img-slow" class="hide" src="assets/images/5-slow.png" alt="">
+    </div>
+
+    <div id="hr6" class="hide">
+        <h2>[stove clicking]</h2>
+        <h2>[taser activates]</h2>
+        <h2>[metronome]</h2>
+        <audio id="audio-6" src="assets/sound/6.gas.wav"></audio>
+        <audio id="audio-6-fast" src="assets/sound/6.gas-fast.wav"></audio>
+        <audio id="audio-6-slow" src="assets/sound/6.gas-slow.wav"></audio>
+        <img id="hr6-img" class="hide" src="assets/images/6.png" alt="">
+        <img id="hr6-img-fast" class="hide" src="assets/images/6-fast.png" alt="">
+        <img id="hr6-img-slow" class="hide" src="assets/images/6-slow.png" alt="">
+    </div>
+
+    <div id="hr7" class="hide">
+        <h2>[coffee machine]</h2>
+        <h2>[radio tuning]</h2>
+        <h2>[demons screaming]</h2>
+        <audio id="audio-7" src="assets/sound/7.spray.wav"></audio>
+        <audio id="audio-7-fast" src="assets/sound/7.spray-fast.wav"></audio>
+        <audio id="audio-7-slow" src="assets/sound/7.spray-slow.wav"></audio>
+        <img id="hr7-img" class="hide" src="assets/images/7.png" alt="">
+        <img id="hr7-img-fast" class="hide" src="assets/images/7-fast.png" alt="">
+        <img id="hr7-img-slow" class="hide" src="assets/images/7-slow.png" alt="">
+    </div>
+
+    <div id="hr8" class="hide">
+        <h2>[train pulling in]</h2>
+        <h2>[thunderstorm]</h2>
+        <h2>[airplane takeoff]</h2>
+        <audio id="audio-8" src="assets/sound/8.train.wav"></audio>
+        <audio id="audio-8-fast" src="assets/sound/8.train-fast.wav"></audio>
+        <audio id="audio-8-slow" src="assets/sound/8.train-slow.wav"></audio>
+        <img id="hr8-img" class="hide" src="assets/images/8.png" alt="">
+        <img id="hr8-img-fast" class="hide" src="assets/images/8-fast.png" alt="">
+        <img id="hr8-img-slow" class="hide" src="assets/images/8-slow.png" alt="">
+    </div>
+
+    <div id="hr9" class="hide">
+        <h2>[fridge opens]</h2>   
+        <h2>[knife chop]</h2>
+        <h2>[inserting cassette]</h2> 
+        <audio id="audio-9" src="assets/sound/9.open.wav"></audio>
+        <audio id="audio-9-fast" src="assets/sound/9.open-fast.wav"></audio>
+        <audio id="audio-9-slow" src="assets/sound/9.open-slow.wav"></audio>
+        <img id="hr9-img" class="hide" src="assets/images/9.png" alt="">
+        <img id="hr9-img-fast" class="hide" src="assets/images/9-fast.png" alt="">
+        <img id="hr9-img-slow" class="hide" src="assets/images/9-slow.png" alt="">
+    </div>
+
+    <div id="hr10" class="hide">
+        <h2>[silent screaming]</h2>
+        <h2>[radiator]</h2>
+        <h2>[laptop fan]</h2>
+        <audio id="audio-10" src="assets/sound/10.silentscream.wav"></audio>
+        <audio id="audio-10-fast" src="assets/sound/10.silentscream-fast.wav"></audio>
+        <audio id="audio-10-slow" src="assets/sound/10.silentscream-slow.wav"></audio>
+        <img id="hr10-img" class="hide" src="assets/images/10.png" alt="">
+        <img id="hr10-img-fast" class="hide" src="assets/images/10-fast.png" alt="">
+        <img id="hr10-img-slow" class="hide" src="assets/images/10-slow.png" alt="">
+    </div>
+
+    <div id="hr11" class="hide">
+        <h2>[alarm beeps]</h2>
+        <h2>[ears ringing]</h2>
+        <h2>[alien abduction]</h2>
+        <audio id="audio-11" src="assets/sound/11.silentscream.wav"></audio>
+        <audio id="audio-11-fast" src="assets/sound/11.silentscream-fast.wav"></audio>
+        <audio id="audio-11-slow" src="assets/sound/11.silentscream-slow.wav"></audio>
+        <img id="hr11-img" class="hide" src="assets/images/11.png" alt="">
+        <img id="hr11-img-fast" class="hide" src="assets/images/11-fast.png" alt="">
+        <img id="hr11-img-slow" class="hide" src="assets/images/11-slow.png" alt="">
+    </div>
+
+    <div id="hr12" class="hide">
+        <h2>[rain crashing]</h2>
+        <h2>[motor running]</h2>
+        <h2>[firecrackers]</h2>
+        <audio id="audio-12" src="assets/sound/12.rain.wav"></audio>
+        <audio id="audio-12-fast" src="assets/sound/12.rain-fast.wav"></audio>
+        <audio id="audio-12-slow" src="assets/sound/12.rain-slow.wav"></audio>
+        <img id="hr12-img" class="hide" src="assets/images/12.png" alt="">
+        <img id="hr12-img-fast" class="hide" src="assets/images/12-fast.png" alt="">
+        <img id="hr12-img-slow" class="hide" src="assets/images/12-slow.png" alt="">
+    </div>
+
+    <div id="hr13" class="hide">
+        <h2>[car alarm]</h2>
+        <h2>[space communication]</h2>
+        <h2>[dolphin communication]</h2>
+        <audio id="audio-13" src="assets/sound/13.weewoo.wav"></audio>
+        <audio id="audio-13-fast" src="assets/sound/13.weewoo-fast.wav"></audio>
+        <audio id="audio-13-slow" src="assets/sound/13.weewoo-slow.wav"></audio>
+        <img id="hr13-img" class="hide" src="assets/images/13.png" alt="">
+        <img id="hr13-img-fast" class="hide" src="assets/images/13-fast.png" alt="">
+        <img id="hr13-img-slow" class="hide" src="assets/images/13-slow.png" alt="">
+    </div>
+
+    <div id="hr14" class="hide">
+        <h2>[door squeaks]</h2>
+        <h2>[siren]</h2>
+        <h2>[slow reveal]</h2>
+        <audio id="audio-14" src="assets/sound/14.slurp.wav"></audio>
+        <audio id="audio-14-fast" src="assets/sound/14.slurp-fast.wav"></audio>
+        <audio id="audio-14-slow" src="assets/sound/14.slurp-slow.wav"></audio>
+        <img id="hr14-img" class="hide" src="assets/images/14.png" alt="">
+        <img id="hr14-img-fast" class="hide" src="assets/images/14-fast.png" alt="">
+        <img id="hr14-img-slow" class="hide" src="assets/images/14-slow.png" alt="">
+
+    </div>
+
+    <div id="hr15" class="hide">
+        <h2>[bird screech]</h2>
+        <h2>[cicada tymbal]</h2>
+        <h2>[bear growl]</h2>
+        <audio id="audio-15" src="assets/sound/15.birdwater.wav"></audio>
+        <audio id="audio-15-fast" src="assets/sound/15.birdwater-fast.wav"></audio>
+        <audio id="audio-15-slow" src="assets/sound/15.birdwater-slow.wav"></audio>
+        <img id="hr15-img" class="hide" src="assets/images/15.png" alt="">
+        <img id="hr15-img-fast" class="hide" src="assets/images/15-fast.png" alt="">
+        <img id="hr15-img-slow" class="hide" src="assets/images/15-slow.png" alt="">
+
+    </div>
+
+    <div id="hr16" class="hide">
+        <h2>[car honk]</h2>
+        <h2>[organ chord]</h2>
+        <h2>[somber sounds]</h2>
+        <audio id="audio-16" src="assets/sound/16.honk.wav"></audio>
+        <audio id="audio-16-fast" src="assets/sound/16.honk-fast.wav"></audio>
+        <audio id="audio-16-slow" src="assets/sound/16.honk-slow.wav"></audio>
+        <img id="hr16-img" class="hide" src="assets/images/16.png" alt="">
+        <img id="hr16-img-fast" class="hide" src="assets/images/16-fast.png" alt="">
+        <img id="hr16-img-slow" class="hide" src="assets/images/16-slow.png" alt="">
+    </div>
+
+    <div id="hr17" class="hide">
+        <h2>[intense growling]</h2>
+        <h2>[vacuum]</h2>
+        <h2>[car engine]</h2>
+        <audio id="audio-17" src="assets/sound/17.rev.wav"></audio>
+        <audio id="audio-17-fast" src="assets/sound/17.rev-fast.wav"></audio>
+        <audio id="audio-17-slow" src="assets/sound/17.rev-slow.wav"></audio>
+        <img id="hr17-img" class="hide" src="assets/images/17.png" alt="">
+        <img id="hr17-img-fast" class="hide" src="assets/images/17-fast.png" alt="">
+        <img id="hr17-img-slow" class="hide" src="assets/images/17-slow.png" alt="">
+    </div>
+
+    <div id="hr18" class="hide">
+        <h2>[kettle whistle]</h2>
+        <h2>[muppet]</h2>
+        <h2>[inner monologue]</h2>
+        <audio id="audio-18" src="assets/sound/18.animal.wav"></audio>
+        <audio id="audio-18-fast" src="assets/sound/18.animal-fast.wav"></audio>
+        <audio id="audio-18-slow" src="assets/sound/18.animal-slow.wav"></audio>
+        <img id="hr18-img" class="hide" src="assets/images/18.png" alt="">
+        <img id="hr18-img-fast" class="hide" src="assets/images/18-fast.png" alt="">
+        <img id="hr18-img-slow" class="hide" src="assets/images/18-slow.png" alt="">
+    </div>
+
+    <div id="hr19" class="hide">
+        <h2>[brakes activating]</h2>
+        <h2>[ghosts haunting]</h2>
+        <h2>[cathedral bells]</h2>
+        <audio id="audio-19" src="assets/sound/19.trainsqueal.wav"></audio>
+        <audio id="audio-19-fast" src="assets/sound/19.trainsqueal-fastwav.wav"></audio>
+        <audio id="audio-19-slow" src="assets/sound/19.trainsqueal-slow.wav"></audio>
+        <img id="hr19-img" class="hide" src="assets/images/19.png" alt="">
+        <img id="hr19-img-fast" class="hide" src="assets/images/19-fast.png" alt="">
+        <img id="hr19-img-slow" class="hide" src="assets/images/19-slow.png" alt="">
+    </div>
+
+    <div id="hr20" class="hide">
+        <h2>[lock turning]</h2>
+        <h2>[fire crackle]</h2>
+        <h2>[lever clicks]</h2>
+        <audio id="audio-20" src="assets/sound/20.lock.wav"></audio>
+        <audio id="audio-20-fast" src="assets/sound/20.lock-fast.wav"></audio>
+        <audio id="audio-20-slow" src="assets/sound/20.lock-slow.wav"></audio>
+        <img id="hr20-img" class="hide" src="assets/images/20.png" alt="">
+        <img id="hr20-img-fast" class="hide" src="assets/images/20-fast.png" alt="">
+        <img id="hr20-img-slow" class="hide" src="assets/images/20-slow.png" alt="">
+    </div>
+
+    <div id="hr21" class="hide">
+        <h2>[cooking noises]</h2>
+        <h2>[rattle]</h2>
+        <h2>[bowling pins]</h2>
+        <audio id="audio-21" src="assets/sound/21.wok.wav"></audio>
+        <audio id="audio-21-fast" src="assets/sound/21.wok-fast.wav"></audio>
+        <audio id="audio-21-slow" src="assets/sound/21.wok-slow.wav"></audio>
+        <img id="hr21-img" class="hide" src="assets/images/21.png" alt="">
+        <img id="hr21-img-fast" class="hide" src="assets/images/21-fast.png" alt="">
+        <img id="hr21-img-slow" class="hide" src="assets/images/21-slow.png" alt="">
+    </div>
+
+    <div id="hr22" class="hide">
+        <h2>[distinct screaming]</h2>
+        <h2>[bird call]</h2>
+        <h2>[whale call]</h2>
+        <audio id="audio-22" src="assets/sound/22.scream.wav"></audio>
+        <audio id="audio-22-fast" src="assets/sound/22.scream-fast.wav"></audio>
+        <audio id="audio-22-slow" src="assets/sound/22.scream-slow.wav"></audio>
+        <img id="hr22-img" class="hide" src="assets/images/22.png" alt="">
+        <img id="hr22-img-fast" class="hide" src="assets/images/22-fast.png" alt="">
+        <img id="hr22-img-slow" class="hide" src="assets/images/22-slow.png" alt="">
+
+    </div>
+
+    <div id="hr23" class="hide">
+        <h2>[jazz music]</h2>
+        <h2>[banjo]</h2>
+        <h2>[tuning instrument]</h2>
+        <audio id="audio-23" src="assets/sound/23.scream.wav"></audio>
+        <audio id="audio-23-fast" src="assets/sound/23.scream-fast.wav"></audio>
+        <audio id="audio-23-slow" src="assets/sound/23.scream-slow.wav"></audio>
+        <img id="hr23-img" class="hide" src="assets/images/23.png" alt="">
+        <img id="hr23-img-fast" class="hide" src="assets/images/23-fast.png" alt="">
+        <img id="hr23-img-slow" class="hide" src="assets/images/23-slow.png" alt="">
+    </div>
+
+    <div id="hr24" class="hide">
+        <h2>[siren]</h2>
+        <h2>[car parking]</h2>
+        <h2>[heart monitor]</h2>
+        <audio id="audio-24" src="assets/sound/24.beepboop.wav"></audio>
+        <audio id="audio-24-fast" src="assets/sound/24.beepboop-fast.wav"></audio>
+        <audio id="audio-24-slow" src="assets/sound/24.beepboop-slow.wav"></audio>
+        <img id="hr24-img" class="hide" src="assets/images/24.png" alt="">
+        <img id="hr24-img-fast" class="hide" src="assets/images/24-fast.png" alt="">
+        <img id="hr24-img-slow" class="hide" src="assets/images/24-slow.png" alt="">
+    </div>
+
+    <div id="hr25" class="hide">
+        <h2>[muffled sounds]</h2>
+        <h2>[distant arguing]</h2>
+        <h2>[scrubbing]</h2>
+        <h2>[bottle cap drops]</h2>
+        <h2>[running water]</h2>
+        <h2>[glasses clink]</h2>
+        <h2>[mice speaking]</h2>
+        <h2>[birds laughing]</h2>
+        <h2>[pterodactyls screeching]</h2>
+        <h2>[swallowing water]</h2>
+        <h2>[lemon squeezing]</h2>
+        <h2>[digestion noises]</h2>
+        <h2>[imitation bird noises]</h2>
+        <h2>[squeak]</h2>
+        <h2>[dj turntable]</h2>
+        <h2>[stove clicking]</h2>
+        <h2>[taser activates]</h2>
+        <h2>[metronome]</h2>
+        <h2>[coffee machine]</h2>
+        <h2>[radio tuning]</h2>
+        <h2>[demons screaming]</h2>
+        <h2>[train pulling in]</h2>
+        <h2>[thunderstorm]</h2>
+        <h2>[airplane takeoff]</h2>
+        <h2>[fridge opens]</h2>   
+        <h2>[knife chop]</h2>
+        <h2>[inserting cassette]</h2> 
+        <h2>[silent screaming]</h2>
+        <h2>[radiator]</h2>
+        <h2>[laptop fan]</h2>
+        <h2>[alarm beeps]</h2>
+        <h2>[ears ringing]</h2>
+        <h2>[alien abduction]</h2>
+        <h2>[rain crashing]</h2>
+        <h2>[motor running]</h2>
+        <h2>[firecrackers]</h2>
+        <h2>[car alarm]</h2>
+        <h2>[space communication]</h2>
+        <h2>[dolphin communication]</h2>
+        <h2>[door squeaks]</h2>
+        <h2>[siren]</h2>
+        <h2>[slow reveal]</h2>
+        <h2>[bird screech]</h2>
+        <h2>[cicada tymbal]</h2>
+        <h2>[bear growl]</h2>
+        <h2>[car honk]</h2>
+        <h2>[organ chord]</h2>
+        <h2>[somber sounds]</h2>
+        <h2>[intense growling]</h2>
+        <h2>[vacuum]</h2>
+        <h2>[car engine]</h2>
+        <h2>[brakes activating]</h2>
+        <h2>[ghosts haunting]</h2>
+        <h2>[cathedral bells]</h2>
+        <h2>[lock turning]</h2>
+        <h2>[fire crackle]</h2>
+        <h2>[lever clicks]</h2>
+        <h2>[cooking noises]</h2>
+        <h2>[rattle]</h2>
+        <h2>[bowling pins]</h2>
+        <h2>[distinct screaming]</h2>
+        <h2>[bird call]</h2>
+        <h2>[whale call]</h2>
+        <h2>[jazz music]</h2>
+        <h2>[banjo]</h2>
+        <h2>[tuning instrument]</h2>
+        <h2>[siren]</h2>
+        <h2>[car parking]</h2>
+        <h2>[heart monitor]</h2>
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
+

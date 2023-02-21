@@ -65,6 +65,7 @@ function hr1TimeReveal(){
         document.getElementById('hr2').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr1-img').classList.add('hide');
     }
     setTimeout(nextHour, 8000);
 }
@@ -111,6 +112,7 @@ function hr2TimeReveal(){
         document.getElementById('hr3').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr2-img').classList.add('hide');
     }
     setTimeout(nextHour, 8000);
 }
@@ -177,6 +179,7 @@ function hr3TimeReveal(){
         document.getElementById('hr4').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr3-img').classList.add('hide');
     }
     setTimeout(nextHour, 8000);
 }
@@ -243,6 +246,7 @@ function hr4TimeReveal(){
         document.getElementById('hr5').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr1-img').classList.add('hide');
     }
     setTimeout(nextHour, 8000);
 }
@@ -309,6 +313,7 @@ function hr5TimeReveal(){
         document.getElementById('hr6').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr5-img').classList.add('hide');
     }
     setTimeout(nextHour, 8000);
 }
@@ -375,6 +380,7 @@ function hr6TimeReveal(){
         document.getElementById('hr8').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr6-img').classList.add('hide');
     }
     setTimeout(nextHour, 8000);
 }
@@ -441,6 +447,7 @@ function hr7TimeReveal(){
         document.getElementById('hr8').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr7-img').classList.add('hide');
     }
     setTimeout(nextHour, 8000);
 }
@@ -507,6 +514,7 @@ function hr8TimeReveal(){
         document.getElementById('hr9').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr8-img').classList.add('hide');
     }
     setTimeout(nextHour, 8000);
 }
@@ -573,6 +581,7 @@ function hr9TimeReveal(){
         document.getElementById('hr10').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr9-img').classList.add('hide');
     }
     setTimeout(nextHour, 8000);
 }
@@ -639,6 +648,7 @@ function hr10TimeReveal(){
         document.getElementById('hr11').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr10-img').classList.add('hide');
     }
     setTimeout(nextHour, 8000);
 }
@@ -705,6 +715,7 @@ function hr11TimeReveal(){
         document.getElementById('hr12').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr11-img').classList.add('hide');
     }
     setTimeout(nextHour, 8000);
 }
@@ -771,6 +782,7 @@ function hr12TimeReveal(){
         document.getElementById('hr13').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr12-img').classList.add('hide');
     }
     setTimeout(nextHour, 8000);
 }
@@ -837,6 +849,8 @@ function hr13TimeReveal(){
         document.getElementById('hr14').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr13-img').classList.add('hide');
+
     }
     setTimeout(nextHour, 8000);
 }
@@ -903,6 +917,7 @@ function hr14TimeReveal(){
         document.getElementById('hr15').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr14-img').classList.add('hide');
     }
     setTimeout(nextHour, 8000);
 }
@@ -969,6 +984,7 @@ function hr15TimeReveal(){
         document.getElementById('hr16').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr15-img').classList.add('hide');
     }
     setTimeout(nextHour, 8000);
 }
@@ -1035,6 +1051,7 @@ function hr16TimeReveal(){
         document.getElementById('hr17').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr16-img').classList.add('hide');
     }
     setTimeout(nextHour, 8000);
 }
@@ -1101,6 +1118,8 @@ function hr17TimeReveal(){
         document.getElementById('hr18').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr17-img').classList.add('hide');
+
     }
     setTimeout(nextHour, 8000);
 }
@@ -1167,6 +1186,8 @@ function hr18TimeReveal(){
         document.getElementById('hr19').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr18-img').classList.add('hide');
+
     }
     setTimeout(nextHour, 8000);
 }
@@ -1233,6 +1254,8 @@ function hr19TimeReveal(){
         document.getElementById('hr20').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr19-img').classList.add('hide');
+
     }
     setTimeout(nextHour, 8000);
 }
@@ -1299,6 +1322,7 @@ function hr20TimeReveal(){
         document.getElementById('hr21').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr20-img').classList.add('hide');
     }
     setTimeout(nextHour, 8000);
 }
@@ -1365,6 +1389,7 @@ function hr21TimeReveal(){
         document.getElementById('hr22').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr21-img').classList.add('hide');
     }
     setTimeout(nextHour, 8000);
 }
@@ -1431,6 +1456,8 @@ function hr22TimeReveal(){
         document.getElementById('hr23').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr22-img').classList.add('hide');
+
     }
     setTimeout(nextHour, 8000);
 }
@@ -1497,6 +1524,8 @@ function hr23TimeReveal(){
         document.getElementById('hr24').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr23-img').classList.add('hide');
+
     }
     setTimeout(nextHour, 8000);
 }
@@ -1563,6 +1592,8 @@ function hr24TimeReveal(){
         document.getElementById('hr25').classList.remove('hide');
         audio.pause();
         document.getElementById("time").innerHTML = "";
+        document.getElementById('hr24-img').classList.add('hide');
+
     }
     setTimeout(nextHour, 8000);
 }

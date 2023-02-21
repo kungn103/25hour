@@ -9,7 +9,7 @@
 </head>
 <body> 
     <!-- enter -->
-    <div id="enter" class="">
+    <div id="enter" class="hide">
         <h2 onclick="enterSite()">enter</h2>
     </div>
 
@@ -18,7 +18,18 @@
     <div id="buttons" class="hide">
         <img src="assets/25-big.png" alt="25" height="50vh">
         <h1 onclick="getHelp()">?</h1>
-        <h1 id="time"></h1>
+    </div>
+
+    <!-- time -->
+    <h1 id="time"></h1>
+
+    <!-- time selector -->
+    <div id="time-travel" class="hide">
+        <span>
+            <input type="number" id="selected-time" min="0" max="23"><br>
+            <span>:00</span>
+            <button id="submit" style="display:none" onclick="controlTime()"></button>
+        </span>
     </div>
 
     <!-- help page -->
@@ -47,9 +58,9 @@
     </div>
 
     <div id="hr2" class="hide">
-        <h2>[bottle cap drops]</h2>
-        <h2>[running water]</h2>
-        <h2>[glasses clink]</h2>
+        <h2 onclick="hr2TimeReveal()">[bottle cap drops]</h2>
+        <h2 onclick="hr2Slow()">[running water]</h2>
+        <h2 onclick="hr2Fast()">[glasses clink]</h2>
         <audio id="audio-2" src="assets/sound/2.clink.wav"></audio>
         <audio id="audio-2-fast" src="assets/sound/2.clink-fast.wav"></audio>
         <audio id="audio-2-slow" src="assets/sound/2.clink-slow.wav"></audio>
@@ -59,9 +70,9 @@
     </div>
 
     <div id="hr3" class="hide">
-        <h2>[mice speaking]</h2>
-        <h2>[birds laughing]</h2>
-        <h2>[pterodactyls screeching]</h2>
+        <h2 onclick="hr3Fast()">[mice speaking]</h2>
+        <h2 onclick="hr3TimeReveal()">[birds laughing]</h2>
+        <h2 onclick="hr3Slow()">[pterodactyls screeching]</h2>
         <audio id="audio-3" src="assets/sound/3.birdlaugh.wav"></audio>
         <audio id="audio-3-fast" src="assets/sound/3.birdlaugh-fast.wav"></audio>
         <audio id="audio-3-slow" src="assets/sound/3.birdlaugh-slow.wav"></audio>
@@ -71,9 +82,9 @@
     </div>
 
     <div id="hr4" class="hide">
-        <h2>[swallowing water]</h2>
-        <h2>[lemon squeezing]</h2>
-        <h2>[digestion noises]</h2>
+        <h2 onclick="hr4TimeReveal()">[swallowing water]</h2>
+        <h2 onclick="hr4Fast()">[lemon squeezing]</h2>
+        <h2 onclick="hr4Slow()">[digestion noises]</h2>
         <audio id="audio-4" src="assets/sound/4.watertread.wav"></audio>
         <audio id="audio-4-fast" src="assets/sound/4.watertread-fast.wav"></audio>
         <audio id="audio-4-slow" src="assets/sound/4.watertread-slow.wav"></audio>
@@ -83,9 +94,9 @@
     </div>
 
     <div id="hr5" class="hide">
-        <h2>[imitation bird noises]</h2>
-        <h2>[squeak]</h2>
-        <h2>[dj turntable]</h2>
+        <h2 onclick="hr5TimeReveal()">[imitation bird noises]</h2>
+        <h2 onclick="hr5Fast()">[squeak]</h2>
+        <h2 onclick="hr5Slow()">[dj turntable]</h2>
         <audio id="audio-5" src="assets/sound/5.chirp.wav"></audio>
         <audio id="audio-5-fast" src="assets/sound/5.chirp-fast.wav"></audio>
         <audio id="audio-5-slow" src="assets/sound/5.chirp.-slow.wav"></audio>
@@ -95,9 +106,9 @@
     </div>
 
     <div id="hr6" class="hide">
-        <h2>[stove clicking]</h2>
-        <h2>[taser activates]</h2>
-        <h2>[metronome]</h2>
+        <h2 onclick="hr6TimeReveal()">[stove clicking]</h2>
+        <h2 onclick="hr6Fast()">[taser activates]</h2>
+        <h2 onclick="hr6Slow()">[metronome]</h2>
         <audio id="audio-6" src="assets/sound/6.gas.wav"></audio>
         <audio id="audio-6-fast" src="assets/sound/6.gas-fast.wav"></audio>
         <audio id="audio-6-slow" src="assets/sound/6.gas-slow.wav"></audio>
@@ -107,9 +118,9 @@
     </div>
 
     <div id="hr7" class="hide">
-        <h2>[coffee machine]</h2>
-        <h2>[radio tuning]</h2>
-        <h2>[demons screaming]</h2>
+        <h2 onclick="hr7TimeReveal()">[coffee machine]</h2>
+        <h2 onclick="hr7Fast()">[radio tuning]</h2>
+        <h2 onclick="hr7Slow()">[demons screaming]</h2>
         <audio id="audio-7" src="assets/sound/7.spray.wav"></audio>
         <audio id="audio-7-fast" src="assets/sound/7.spray-fast.wav"></audio>
         <audio id="audio-7-slow" src="assets/sound/7.spray-slow.wav"></audio>
@@ -119,9 +130,9 @@
     </div>
 
     <div id="hr8" class="hide">
-        <h2>[train pulling in]</h2>
-        <h2>[thunderstorm]</h2>
-        <h2>[airplane takeoff]</h2>
+        <h2 onclick="hr8TimeReveal()">[train pulling in]</h2>
+        <h2 onclick="hr8Slow()">[thunderstorm]</h2>
+        <h2 onclick="hr8Fast()">[airplane takeoff]</h2>
         <audio id="audio-8" src="assets/sound/8.train.wav"></audio>
         <audio id="audio-8-fast" src="assets/sound/8.train-fast.wav"></audio>
         <audio id="audio-8-slow" src="assets/sound/8.train-slow.wav"></audio>
@@ -131,9 +142,9 @@
     </div>
 
     <div id="hr9" class="hide">
-        <h2>[fridge opens]</h2>   
-        <h2>[knife chop]</h2>
-        <h2>[inserting cassette]</h2> 
+        <h2 onclick="hr9TimeReveal()">[fridge opens]</h2>   
+        <h2 onclick="hr9Slow()">[knife chop]</h2>
+        <h2 onclick="hr9Fast()">[inserting cassette]</h2> 
         <audio id="audio-9" src="assets/sound/9.open.wav"></audio>
         <audio id="audio-9-fast" src="assets/sound/9.open-fast.wav"></audio>
         <audio id="audio-9-slow" src="assets/sound/9.open-slow.wav"></audio>
@@ -143,9 +154,9 @@
     </div>
 
     <div id="hr10" class="hide">
-        <h2>[silent screaming]</h2>
-        <h2>[radiator]</h2>
-        <h2>[laptop fan]</h2>
+        <h2 onclick="hr10TimeReveal()">[silent screaming]</h2>
+        <h2 onclick="hr10Slow()">[radiator]</h2>
+        <h2 onclick="hr10Fast()">[laptop fan]</h2>
         <audio id="audio-10" src="assets/sound/10.silentscream.wav"></audio>
         <audio id="audio-10-fast" src="assets/sound/10.silentscream-fast.wav"></audio>
         <audio id="audio-10-slow" src="assets/sound/10.silentscream-slow.wav"></audio>
@@ -155,21 +166,21 @@
     </div>
 
     <div id="hr11" class="hide">
-        <h2>[alarm beeps]</h2>
-        <h2>[ears ringing]</h2>
-        <h2>[alien abduction]</h2>
-        <audio id="audio-11" src="assets/sound/11.silentscream.wav"></audio>
-        <audio id="audio-11-fast" src="assets/sound/11.silentscream-fast.wav"></audio>
-        <audio id="audio-11-slow" src="assets/sound/11.silentscream-slow.wav"></audio>
+        <h2 onclick="hr11TimeReveal()">[alarm beeps]</h2>
+        <h2 onclick="hr11Fast()">[ears ringing]</h2>
+        <h2 onclick="hr11Slow()">[alien abduction]</h2>
+        <audio id="audio-11" src="assets/sound/11.beeping.wav"></audio>
+        <audio id="audio-11-fast" src="assets/sound/11.beeping-fast.wav"></audio>
+        <audio id="audio-11-slow" src="assets/sound/11.beeping-slow.wav"></audio>
         <img id="hr11-img" class="hide" src="assets/images/11.png" alt="">
         <img id="hr11-img-fast" class="hide" src="assets/images/11-fast.png" alt="">
         <img id="hr11-img-slow" class="hide" src="assets/images/11-slow.png" alt="">
     </div>
 
     <div id="hr12" class="hide">
-        <h2>[rain crashing]</h2>
-        <h2>[motor running]</h2>
-        <h2>[firecrackers]</h2>
+        <h2 onclick="hr12TimeReveal()">[rain crashing]</h2>
+        <h2 onclick="hr12Slow()">[motor running]</h2>
+        <h2 onclick="hr12Fast()">[firecrackers]</h2>
         <audio id="audio-12" src="assets/sound/12.rain.wav"></audio>
         <audio id="audio-12-fast" src="assets/sound/12.rain-fast.wav"></audio>
         <audio id="audio-12-slow" src="assets/sound/12.rain-slow.wav"></audio>
@@ -179,9 +190,9 @@
     </div>
 
     <div id="hr13" class="hide">
-        <h2>[car alarm]</h2>
-        <h2>[space communication]</h2>
-        <h2>[dolphin communication]</h2>
+        <h2 onclick="hr13TimeReveal()">[car alarm]</h2>
+        <h2 onclick="hr13Fast()">[space communication]</h2>
+        <h2 onclick="hr13Slow()">[dolphin communication]</h2>
         <audio id="audio-13" src="assets/sound/13.weewoo.wav"></audio>
         <audio id="audio-13-fast" src="assets/sound/13.weewoo-fast.wav"></audio>
         <audio id="audio-13-slow" src="assets/sound/13.weewoo-slow.wav"></audio>
@@ -191,9 +202,9 @@
     </div>
 
     <div id="hr14" class="hide">
-        <h2>[door squeaks]</h2>
-        <h2>[siren]</h2>
-        <h2>[slow reveal]</h2>
+        <h2 onclick="hr14TimeReveal()">[door squeaks]</h2>
+        <h2 onclick="hr14Fast()">[siren]</h2>
+        <h2 onclick="hr14Slow()">[slow reveal]</h2>
         <audio id="audio-14" src="assets/sound/14.slurp.wav"></audio>
         <audio id="audio-14-fast" src="assets/sound/14.slurp-fast.wav"></audio>
         <audio id="audio-14-slow" src="assets/sound/14.slurp-slow.wav"></audio>
@@ -204,9 +215,9 @@
     </div>
 
     <div id="hr15" class="hide">
-        <h2>[bird screech]</h2>
-        <h2>[cicada tymbal]</h2>
-        <h2>[bear growl]</h2>
+        <h2 onclick="hr15TimeReveal()">[bird screech]</h2>
+        <h2 onclick="hr15Fast()">[cicada tymbal]</h2>
+        <h2 onclick="hr15Slow()">[bear growl]</h2>
         <audio id="audio-15" src="assets/sound/15.birdwater.wav"></audio>
         <audio id="audio-15-fast" src="assets/sound/15.birdwater-fast.wav"></audio>
         <audio id="audio-15-slow" src="assets/sound/15.birdwater-slow.wav"></audio>
@@ -217,9 +228,9 @@
     </div>
 
     <div id="hr16" class="hide">
-        <h2>[car honk]</h2>
-        <h2>[organ chord]</h2>
-        <h2>[somber sounds]</h2>
+        <h2 onclick="hr16TimeReveal()">[car honk]</h2>
+        <h2 onclick="hr16Fast()">[organ chord]</h2>
+        <h2 onclick="hr16Slow()">[somber sounds]</h2>
         <audio id="audio-16" src="assets/sound/16.honk.wav"></audio>
         <audio id="audio-16-fast" src="assets/sound/16.honk-fast.wav"></audio>
         <audio id="audio-16-slow" src="assets/sound/16.honk-slow.wav"></audio>
@@ -229,9 +240,9 @@
     </div>
 
     <div id="hr17" class="hide">
-        <h2>[intense growling]</h2>
-        <h2>[vacuum]</h2>
-        <h2>[car engine]</h2>
+        <h2 onclick="hr17Slow()">[intense growling]</h2>
+        <h2 onclick="hr17Fast()">[vacuum]</h2>
+        <h2 onclick="hr17TimeReveal()">[car engine]</h2>
         <audio id="audio-17" src="assets/sound/17.rev.wav"></audio>
         <audio id="audio-17-fast" src="assets/sound/17.rev-fast.wav"></audio>
         <audio id="audio-17-slow" src="assets/sound/17.rev-slow.wav"></audio>
@@ -241,9 +252,9 @@
     </div>
 
     <div id="hr18" class="hide">
-        <h2>[kettle whistle]</h2>
-        <h2>[muppet]</h2>
-        <h2>[inner monologue]</h2>
+        <h2 onclick="hr18Fast()">[kettle whistle]</h2>
+        <h2 onclick="hr18Slow()">[muppet]</h2>
+        <h2 onclick="hr18TimeReveal()">[inner monologue]</h2>
         <audio id="audio-18" src="assets/sound/18.animal.wav"></audio>
         <audio id="audio-18-fast" src="assets/sound/18.animal-fast.wav"></audio>
         <audio id="audio-18-slow" src="assets/sound/18.animal-slow.wav"></audio>
@@ -253,9 +264,9 @@
     </div>
 
     <div id="hr19" class="hide">
-        <h2>[brakes activating]</h2>
-        <h2>[ghosts haunting]</h2>
-        <h2>[cathedral bells]</h2>
+        <h2 onclick="hr19TimeReveal()">[brakes activating]</h2>
+        <h2 onclick="hr19Fast()">[ghosts haunting]</h2>
+        <h2 onclick="hr19Slow()">[cathedral bells]</h2>
         <audio id="audio-19" src="assets/sound/19.trainsqueal.wav"></audio>
         <audio id="audio-19-fast" src="assets/sound/19.trainsqueal-fastwav.wav"></audio>
         <audio id="audio-19-slow" src="assets/sound/19.trainsqueal-slow.wav"></audio>
@@ -265,9 +276,9 @@
     </div>
 
     <div id="hr20" class="hide">
-        <h2>[lock turning]</h2>
-        <h2>[fire crackle]</h2>
-        <h2>[lever clicks]</h2>
+        <h2 onclick="hr20TimeReveal()">[lock turning]</h2>
+        <h2 onclick="hr20Fast()">[fire crackle]</h2>
+        <h2 onclick="hr20Slow()">[lever clicks]</h2>
         <audio id="audio-20" src="assets/sound/20.lock.wav"></audio>
         <audio id="audio-20-fast" src="assets/sound/20.lock-fast.wav"></audio>
         <audio id="audio-20-slow" src="assets/sound/20.lock-slow.wav"></audio>
@@ -277,9 +288,9 @@
     </div>
 
     <div id="hr21" class="hide">
-        <h2>[cooking noises]</h2>
-        <h2>[rattle]</h2>
-        <h2>[bowling pins]</h2>
+        <h2 onclick="hr21TimeReveal()">[cooking noises]</h2>
+        <h2 onclick="hr21Fast()">[rattle]</h2>
+        <h2 onclick="hr21Slow()">[bowling pins]</h2>
         <audio id="audio-21" src="assets/sound/21.wok.wav"></audio>
         <audio id="audio-21-fast" src="assets/sound/21.wok-fast.wav"></audio>
         <audio id="audio-21-slow" src="assets/sound/21.wok-slow.wav"></audio>
@@ -289,9 +300,9 @@
     </div>
 
     <div id="hr22" class="hide">
-        <h2>[distinct screaming]</h2>
-        <h2>[bird call]</h2>
-        <h2>[whale call]</h2>
+        <h2 onclick="hr22TimeReveal()">[distinct screaming]</h2>
+        <h2 onclick="hr22Fast()">[bird call]</h2>
+        <h2 onclick="hr22Slow()">[whale call]</h2>
         <audio id="audio-22" src="assets/sound/22.scream.wav"></audio>
         <audio id="audio-22-fast" src="assets/sound/22.scream-fast.wav"></audio>
         <audio id="audio-22-slow" src="assets/sound/22.scream-slow.wav"></audio>
@@ -302,21 +313,21 @@
     </div>
 
     <div id="hr23" class="hide">
-        <h2>[jazz music]</h2>
-        <h2>[banjo]</h2>
-        <h2>[tuning instrument]</h2>
-        <audio id="audio-23" src="assets/sound/23.scream.wav"></audio>
-        <audio id="audio-23-fast" src="assets/sound/23.scream-fast.wav"></audio>
-        <audio id="audio-23-slow" src="assets/sound/23.scream-slow.wav"></audio>
+        <h2 onclick="hr23TimeReveal()">[jazz music]</h2>
+        <h2 onclick="hr23Fast()">[banjo]</h2>
+        <h2 onclick="hr23Slow()">[tuning instrument]</h2>
+        <audio id="audio-23" src="assets/sound/23.jazz.wav"></audio>
+        <audio id="audio-23-fast" src="assets/sound/23.jazz-fast.wav"></audio>
+        <audio id="audio-23-slow" src="assets/sound/23.jazz-slow.wav"></audio>
         <img id="hr23-img" class="hide" src="assets/images/23.png" alt="">
         <img id="hr23-img-fast" class="hide" src="assets/images/23-fast.png" alt="">
         <img id="hr23-img-slow" class="hide" src="assets/images/23-slow.png" alt="">
     </div>
 
     <div id="hr24" class="hide">
-        <h2>[siren]</h2>
-        <h2>[car parking]</h2>
-        <h2>[heart monitor]</h2>
+        <h2 onclick="hr24TimeReveal()">[siren]</h2>
+        <h2 onclick="hr24Fast()">[car parking]</h2>
+        <h2 onclick="hr24Slow()">[heart monitor]</h2>
         <audio id="audio-24" src="assets/sound/24.beepboop.wav"></audio>
         <audio id="audio-24-fast" src="assets/sound/24.beepboop-fast.wav"></audio>
         <audio id="audio-24-slow" src="assets/sound/24.beepboop-slow.wav"></audio>
@@ -325,7 +336,7 @@
         <img id="hr24-img-slow" class="hide" src="assets/images/24-slow.png" alt="">
     </div>
 
-    <div id="hr25" class="hide">
+    <div id="hr25" class="" onclick="pan()">
         <h2>[muffled sounds]</h2>
         <h2>[distant arguing]</h2>
         <h2>[scrubbing]</h2>
@@ -397,7 +408,9 @@
         <h2>[heart monitor]</h2>
     </div>
 
+
     <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
+
 
